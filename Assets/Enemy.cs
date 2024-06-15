@@ -39,4 +39,13 @@ public class Enemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position,player.transform.position,speed*Time.deltaTime);
     
     }
+
+    private void OnCollisionEnter(Collision other) {
+        if(other.transform.tag == "Player"){
+            other.gameObject.GetComponent<HEALTH>().TakeDamage(10);
+        }
+    
+    }
 }
+
+

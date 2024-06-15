@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+
+
+
 private void OnTriggerEnter(Collider other){
+other.GetComponent<HEALTH>().collectCoins(1);
     Destroy(gameObject);
 
 }
+
 
 
 }
